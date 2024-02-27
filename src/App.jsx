@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import IonCartOutline from "./components/Cart-Icon";
-import Counters from "./components/Counters";
+import Counter from "./components/Counter";
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
         </nav>
         <div className="Cart-Icon">
           <IonCartOutline />
-          <Counters />
+          <Counter />
         </div>
       </header>
     </div>
