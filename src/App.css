@@ -24,3 +24,8 @@ li {
 li:hover {
   text-decoration: underline;
 }
+
+.Cart-Icon {
+  display: flex;
+  flex-direction: row;
+}
