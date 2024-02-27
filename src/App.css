@@ -1,28 +1,24 @@
-body {
-  background-color: #d0f0fd;
-  text-align: center;
-}
-
 .App-header {
   background-color: #97b0de;
   min-height: 10vh;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   font-size: 15px;
   font-weight: 500;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .App-nav {
   color: #0a0f11;
   display: flex;
-  flex-direction: row;
-  justify-content: start;
   list-style: none;
 }
 
 li {
-  margin-left: 5%;
+  margin-right: 40%;
 }
 
 li:hover {
