@@ -1,6 +1,6 @@
 import "./index.css";
-import IonCartOutline from "../Cart-Icon/Cart-Icon";
-import Counter from "../Counter/Counter";
+import IonCartOutline from "../CartIcon";
+import Counter from "../Counter";
 
 export default function Header() {
   return (
