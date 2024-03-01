@@ -2,7 +2,11 @@ import React from "react";
 import Layout from "./components/Layout";
 
 function App() {
-  return <Layout></Layout>;
+  return (
+    <div>
+      <Layout />
+    </div>
+  );
 }
 
 export default App;
