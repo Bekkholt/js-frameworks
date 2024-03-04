@@ -2,9 +2,9 @@ import styles from "./index.module.css";
 import Header from "../Header";
 import Footer from "../Footer";
 import { Routes, Route } from "react-router-dom";
-import ContactPage from "../ContactPage";
-import CheckoutPage from "../CheckoutPage";
-import HomePage from "../HomePage";
+import ContactPage from "../../Pages/ContactPage";
+import CheckoutPage from "../../Pages/CheckoutPage";
+import HomePage from "../../Pages/HomePage";
 
 export default function Layout() {
   return (
