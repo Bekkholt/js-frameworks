@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import * as S from "./index.styles";
+import Products from "../Products/Products";
 
 const url = "https://v2.api.noroff.dev/online-shop";
 
-export default function Product() {
+export default function ProductList() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -18,19 +18,15 @@ export default function Product() {
   return (
     <div>
       {products.map((product) => (
-        <div key={product.id}>
-          <S.ProductCard>
-            <S.ProductImage
-              alt={product.image.alt}
-              src={product.image.url}
-            ></S.ProductImage>
-            <S.ProductTitle>{product.title}</S.ProductTitle>
-            <S.ProductDescription>{product.description}</S.ProductDescription>
-            <S.ProductButton>View product</S.ProductButton>
-            <S.ProductPrice>{product.price}</S.ProductPrice>
-            <S.DiscountPrice>{product.discountedPrice}</S.DiscountPrice>
-          </S.ProductCard>
-        </div>
+        <Products
+          key={product.id}
+          id={product.id}
+          image={product.image}
+          title={product.title}
+          description={product.description}
+          price={product.price}
+          discountedPrice={product.discountedPrice}
+        />
       ))}
     </div>
   );
