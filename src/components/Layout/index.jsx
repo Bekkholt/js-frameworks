@@ -5,36 +5,17 @@ import { Routes, Route } from "react-router-dom";
 import ContactPage from "../ContactPage";
 import CheckoutPage from "../CheckoutPage";
 import HomePage from "../HomePage";
+import ProductPage from "../ProductPage";
 
 export default function Layout() {
   return (
     <div className={styles.pageWrapper}>
       <Header />
       <Routes>
-        <Route
-          index
-          element={
-            <div>
-              <HomePage />
-            </div>
-          }
-        />
-        <Route
-          path="/src/components/ContactPage"
-          element={
-            <div>
-              <ContactPage />
-            </div>
-          }
-        />
-        <Route
-          path="/src/components/CheckoutPage"
-          element={
-            <div>
-              <CheckoutPage />
-            </div>
-          }
-        />
+        <Route index element={<HomePage />} />
+        <Route path="/src/components/ContactPage" element={<ContactPage />} />
+        <Route path="/src/components/CheckoutPage" element={<CheckoutPage />} />
+        <Route path="*" element={<ProductPage />} />
       </Routes>
       <main className={styles.myBody}></main>
       <Footer />

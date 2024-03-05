@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Products from "../Products/Products";
+import Products from "../Products";
 
 const url = "https://v2.api.noroff.dev/online-shop";
 
