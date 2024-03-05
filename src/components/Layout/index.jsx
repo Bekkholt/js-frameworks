@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import ContactPage from "../../Pages/ContactPage";
 import CheckoutPage from "../../Pages/CheckoutPage";
 import HomePage from "../../Pages/HomePage";
+import ProductPage from "../../Pages/ProductPage";
 
 export default function Layout() {
   return (
