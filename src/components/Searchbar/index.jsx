@@ -1,7 +1,9 @@
+import * as S from "./index.styles";
+
 export default function Searchbar() {
   return (
     <div>
-      <input type="text" placeholder="Search"></input>
+      <S.Searchbar type="text" placeholder="Search"></S.Searchbar>
     </div>
   );
 }

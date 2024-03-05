@@ -2,7 +2,6 @@ import "./index.css";
 import IonCartOutline from "../CartIcon";
 import Counter from "../Counter";
 import { Link } from "react-router-dom";
-import Searchbar from "../Searchbar";
 
 export default function Header() {
   return (
@@ -15,7 +14,6 @@ export default function Header() {
           <Link to="/src/components/ContactPage">Contact</Link>
         </li>
       </nav>
-      <Searchbar />
       <div className="Cart-Icon">
         <Link to="/src/components/CheckoutPage">
           <IonCartOutline />
