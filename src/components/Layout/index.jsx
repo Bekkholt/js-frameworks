@@ -11,30 +11,10 @@ export default function Layout() {
     <div className={styles.pageWrapper}>
       <Header />
       <Routes>
-        <Route
-          index
-          element={
-            <div>
-              <HomePage />
-            </div>
-          }
-        />
-        <Route
-          path="/src/components/ContactPage"
-          element={
-            <div>
-              <ContactPage />
-            </div>
-          }
-        />
-        <Route
-          path="/src/components/CheckoutPage"
-          element={
-            <div>
-              <CheckoutPage />
-            </div>
-          }
-        />
+        <Route index element={<HomePage />} />
+        <Route path="/src/components/ContactPage" element={<ContactPage />} />
+        <Route path="/src/components/CheckoutPage" element={<CheckoutPage />} />
+        <Route path="*" element={<ProductPage />} />
       </Routes>
       <main className={styles.myBody}></main>
       <Footer />
