@@ -21,10 +21,6 @@ li {
   margin-right: 40%;
 }
 
-li:hover {
-  text-decoration: underline;
-}
-
 .Cart-Icon {
   display: flex;
   flex-direction: row;
