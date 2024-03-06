@@ -1,20 +1,10 @@
-import React, { useEffect, useState } from "react";
 import Products from "../Products";
-
-const url = "https://v2.api.noroff.dev/online-shop";
+import FetchAPI from "../../Hooks/API";
 
 export default function ProductList() {
-  const [products, setProducts] = useState([]);
+  const { products } = FetchAPI("https://v2.api.noroff.dev/online-shop/");
 
-  useEffect(() => {
-    async function getData() {
-      const response = await fetch(url);
-      const json = await response.json();
-      setProducts(json.data);
-    }
-    getData();
-  }, []);
-
+  <FetchAPI />;
   return (
     <div>
       {products.map((product) => (
