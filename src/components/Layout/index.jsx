@@ -13,9 +13,9 @@ export default function Layout() {
       <Header />
       <Routes>
         <Route index element={<HomePage />} />
-        <Route path="/src/components/ContactPage" element={<ContactPage />} />
-        <Route path="/src/components/CheckoutPage" element={<CheckoutPage />} />
-        <Route path="*" element={<ProductPage />} />
+        <Route path="/Pages/ContactPage" element={<ContactPage />} />
+        <Route path="/Pages/CheckoutPage" element={<CheckoutPage />} />
+        <Route path="/Pages/ProductPage/:id" element={<ProductPage />} />
       </Routes>
       <main className={styles.myBody}></main>
       <Footer />

@@ -11,11 +11,11 @@ export default function Header() {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/src/components/ContactPage">Contact</Link>
+          <Link to="../../Pages/ContactPage">Contact</Link>
         </li>
       </nav>
       <div className="Cart-Icon">
-        <Link to="/src/components/CheckoutPage">
+        <Link to="../../Pages/CheckoutPage">
           <IonCartOutline />
         </Link>
         <Counter />

@@ -1,7 +1,49 @@
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+
 export default function ProductPage() {
-  return (
-    <div>
-      <h2>Product Title</h2>
-    </div>
-  );
+  // const [data, setData] = useState();
+  // const [isLoading, setIsLoading] = useState(false);
+  // const [isError, setIsError] = useState(false);
+  // let { id } = useParams();
+
+  // useEffect(() => {
+  //   async function getData(url) {
+  //     try {
+  //       setIsLoading(true);
+  //       setIsError(false);
+
+  //       const response = await fetch(url);
+  //       const json = await response.json();
+
+  //       setData(json);
+  //     } catch (error) {
+  //       console.log(error);
+  //     } finally {
+  //       setIsLoading(false);
+  //     }
+  //   }
+
+  //   // getData(`https://docs.noroff.dev/docs/v2/basic/online-shop/${id}`);
+  //   console.log(id);
+  // }, [id]);
+
+  // if (isLoading || !data) {
+  //   return <div>Loading</div>;
+  // }
+
+  // if (isError) {
+  //   return <div>Error</div>;
+  // }
+
+  // console.log(data);
+  // return (
+  //   <div>
+  //     <div>title: {data.title}</div>
+  //   </div>
+  // );
+
+  let params = useParams();
+  console.log(params);
+  return <div>Individual Post ID: {params.id}</div>;
 }

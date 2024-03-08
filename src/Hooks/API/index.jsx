@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const url = "https://v2.api.noroff.dev/online-shop";
+const url = "https://v2.api.noroff.dev/online-shop/";
 
 export default function FetchAPI() {
   const [products, setProducts] = useState([]);

@@ -11,7 +11,7 @@ export default function Product(product) {
       ></S.ProductImage>
       <S.ProductTitle>{product.title}</S.ProductTitle>
       <S.ProductDescription>{product.description}</S.ProductDescription>
-      <Link to={`ProductPage/${product.id}`}>
+      <Link to={`../../Pages/ProductPage/${product.id}`}>
         <S.ProductButton>View product</S.ProductButton>
       </Link>
       <S.ProductPrice>{product.price}</S.ProductPrice>
