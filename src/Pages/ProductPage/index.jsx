@@ -46,7 +46,7 @@ export default function ProductPage() {
   ));
 
   if (reviews.length === 0) {
-    reviews = <p>Nobody reviews</p>;
+    reviews = <p>No reviews</p>;
   }
 
   console.log(productDetails);
