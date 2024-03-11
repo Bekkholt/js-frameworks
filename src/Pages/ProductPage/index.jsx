@@ -36,6 +36,10 @@ export default function ProductPage() {
     return <div>Error</div>;
   }
 
+  let Price = productDetails.price;
+  let Discount = productDetails.discountedPrice;
+  let Save = (Price - Discount).toFixed(0);
+
   let reviews = productDetails.reviews.map((review) => (
     <S.ProductReviews key={review.id}>
       <div>
@@ -62,8 +66,10 @@ export default function ProductPage() {
         alt={productDetails.image.alt}
         src={productDetails.image.url}
       ></S.ProductImage>
-      <S.DiscountPrice>{productDetails.discountedPrice}</S.DiscountPrice>
       <S.ProductPrice>{productDetails.price}</S.ProductPrice>
+      <S.SavePrice> - {Save}.00</S.SavePrice>
+
+      <S.DiscountPrice>{productDetails.discountedPrice}</S.DiscountPrice>
       <S.ProductDescription>{productDetails.description}</S.ProductDescription>
       <S.ProductButton>Add to cart</S.ProductButton>
       <S.ReviewTitle>Reviews</S.ReviewTitle>

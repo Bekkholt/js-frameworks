@@ -26,6 +26,11 @@ export const ProductPrice = styled.p`
   margin-bottom: 0;
 `;
 
+export const SavePrice = styled.p`
+  font-size: large;
+  margin-top: 0;
+`;
+
 export const DiscountPrice = styled.p`
   font-size: x-large;
   margin-top: 0;
