@@ -5,21 +5,19 @@ export const ProductTitle = styled.h2`
 `;
 
 export const ProductImage = styled.img`
-  max-width: 70%;
-  margin-top: 10%;
+  max-width: 30%;
+  max-height: 30%;
 `;
 
 export const ProductDescription = styled.p`
-  border: 0;
-  background: none;
-  margin: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
 `;
 
 export const ProductButton = styled.button`
   border: 2;
   background: none;
   background-color: lightblue;
-  margin: 2%;
 `;
 
 export const ProductPrice = styled.p`
@@ -31,7 +29,26 @@ export const ProductPrice = styled.p`
 export const DiscountPrice = styled.p`
   font-size: x-large;
   margin-top: 0;
-  padding-bottom: 5%;
   color: darkred;
   font-weight: bold;
+`;
+
+export const ReviewTitle = styled.h3`
+  text-decoration: underline;
+  padding-top: 5%;
+`;
+
+export const ProductReviews = styled.div`
+  h4 {
+    display: flex;
+    align-items: flex-start;
+    margin-left: 10%;
+    text-decoration: underline;
+  }
+
+  p {
+    display: flex;
+    align-items: flex-start;
+    margin-left: 10%;
+  }
 `;

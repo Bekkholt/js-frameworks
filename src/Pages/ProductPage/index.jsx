@@ -36,6 +36,21 @@ export default function ProductPage() {
     return <div>Error</div>;
   }
 
+  let reviews = productDetails.reviews.map((review) => (
+    <S.ProductReviews key={review.id}>
+      <div>
+        <h4>{review.username} says:</h4>
+        <p>{review.description}</p>
+      </div>
+    </S.ProductReviews>
+  ));
+
+  if (reviews.length === 0) {
+    reviews = <p>Nobody reviews</p>;
+  }
+
+  console.log(productDetails);
+
   return (
     <div>
       <S.ProductTitle>{productDetails.title}</S.ProductTitle>
@@ -47,6 +62,8 @@ export default function ProductPage() {
       <S.ProductPrice>{productDetails.price}</S.ProductPrice>
       <S.ProductDescription>{productDetails.description}</S.ProductDescription>
       <S.ProductButton>Add to cart</S.ProductButton>
+      <S.ReviewTitle>Reviews</S.ReviewTitle>
+      {reviews}
     </div>
   );
 }
