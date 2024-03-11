@@ -46,7 +46,11 @@ export default function ProductPage() {
   ));
 
   if (reviews.length === 0) {
-    reviews = <p>No reviews</p>;
+    reviews = (
+      <S.ProductReviews>
+        <p>No reviews</p>
+      </S.ProductReviews>
+    );
   }
 
   console.log(productDetails);
