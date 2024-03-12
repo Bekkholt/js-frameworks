@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import AddToCart from "../../components/AddToCart";
 import * as S from "./index.styles";
 
-export default function ProductPage() {
+export default function ProductPage(addToCart) {
   const [productDetails, setProductDetails] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
@@ -57,8 +58,6 @@ export default function ProductPage() {
     );
   }
 
-  console.log(productDetails);
-
   return (
     <div>
       <S.ProductTitle>{productDetails.title}</S.ProductTitle>
@@ -68,10 +67,9 @@ export default function ProductPage() {
       ></S.ProductImage>
       <S.ProductPrice>{productDetails.price}</S.ProductPrice>
       <S.SavePrice> - {Save}.00</S.SavePrice>
-
       <S.DiscountPrice>{productDetails.discountedPrice}</S.DiscountPrice>
       <S.ProductDescription>{productDetails.description}</S.ProductDescription>
-      <S.ProductButton>Add to cart</S.ProductButton>
+      <AddToCart addToCart={addToCart.addToCart} />
       <S.ReviewTitle>Reviews</S.ReviewTitle>
       {reviews}
     </div>

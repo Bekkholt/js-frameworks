@@ -14,12 +14,6 @@ export const ProductDescription = styled.p`
   margin-right: 5%;
 `;
 
-export const ProductButton = styled.button`
-  border: 2;
-  background: none;
-  background-color: lightblue;
-`;
-
 export const ProductPrice = styled.p`
   font-size: large;
   text-decoration: line-through;

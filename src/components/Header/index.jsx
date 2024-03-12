@@ -3,7 +3,7 @@ import IonCartOutline from "../CartIcon";
 import Counter from "../Counter";
 import { Link } from "react-router-dom";
 
-export default function Header() {
+export default function Header(count) {
   return (
     <header className="App-header">
       <nav className="App-nav">
@@ -18,7 +18,7 @@ export default function Header() {
         <Link to="../../Pages/CheckoutPage">
           <IonCartOutline />
         </Link>
-        <Counter />
+        <Counter count={count.count} />
       </div>
     </header>
   );

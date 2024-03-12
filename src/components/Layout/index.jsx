@@ -6,16 +6,38 @@ import ContactPage from "../../Pages/ContactPage";
 import CheckoutPage from "../../Pages/CheckoutPage";
 import HomePage from "../../Pages/HomePage";
 import ProductPage from "../../Pages/ProductPage";
+import { useReducer } from "react";
+
+function reducer(state, action) {
+  switch (action.type) {
+    case "increment":
+      // todo push id to state.inCart array
+      return { count: state.count + 1, latest: action.id };
+    case "decrement":
+      return { count: state.count - 1 };
+    case "reset":
+      return { count: 0 };
+    default:
+      throw new Error();
+  }
+}
+
+const initialState = { count: 0, latest: "", inCart: [] };
 
 export default function Layout() {
+  const [state, dispatch] = useReducer(reducer, initialState);
+
   return (
     <div className={styles.pageWrapper}>
-      <Header />
+      <Header count={state.count} />
       <Routes>
         <Route index element={<HomePage />} />
         <Route path="/Pages/ContactPage" element={<ContactPage />} />
         <Route path="/Pages/CheckoutPage" element={<CheckoutPage />} />
-        <Route path="/Pages/ProductPage/:id" element={<ProductPage />} />
+        <Route
+          path="/Pages/ProductPage/:id"
+          element={<ProductPage addToCart={(action) => dispatch(action)} />}
+        />
       </Routes>
       <main className={styles.myBody}></main>
       <Footer />
