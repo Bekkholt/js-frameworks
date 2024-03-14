@@ -6,13 +6,13 @@ import ContactPage from "../../Pages/ContactPage";
 import CheckoutPage from "../../Pages/CheckoutPage";
 import HomePage from "../../Pages/HomePage";
 import ProductPage from "../../Pages/ProductPage";
+import CheckoutSuccessPage from "../../Pages/CheckoutSuccessPage";
 import { useReducer } from "react";
 
 function reducer(state, action) {
   switch (action.type) {
     case "increment":
-      // todo push id to state.inCart array
-      return { count: state.count + 1, latest: action.id };
+      return { count: state.count + 1, inCart: [action.id] };
     case "decrement":
       return { count: state.count - 1 };
     case "reset":
@@ -22,7 +22,7 @@ function reducer(state, action) {
   }
 }
 
-const initialState = { count: 0, latest: "", inCart: [] };
+const initialState = { count: 0, inCart: [] };
 
 export default function Layout() {
   const [state, dispatch] = useReducer(reducer, initialState);
@@ -33,10 +33,18 @@ export default function Layout() {
       <Routes>
         <Route index element={<HomePage />} />
         <Route path="/Pages/ContactPage" element={<ContactPage />} />
-        <Route path="/Pages/CheckoutPage" element={<CheckoutPage />} />
+        <Route
+          path="/Pages/CheckoutPage"
+          element={<CheckoutPage inCart={state.inCart} />}
+        />
+
         <Route
           path="/Pages/ProductPage/:id"
           element={<ProductPage addToCart={(action) => dispatch(action)} />}
+        />
+        <Route
+          path="/Pages/CheckoutSuccessPage"
+          element={<CheckoutSuccessPage />}
         />
       </Routes>
       <main className={styles.myBody}></main>
