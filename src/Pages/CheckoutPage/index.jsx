@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import CheckoutProducts from "../../components/CheckoutProducts";
 
 export default function CheckoutPage(inCart) {
   console.log(inCart);
@@ -7,7 +8,7 @@ export default function CheckoutPage(inCart) {
     <div>
       <h1>In cart</h1>
       {inCart.inCart.map((inCart, i) => (
-        <p key={i + inCart.id}>{inCart.title}</p>
+        <CheckoutProducts key={i + inCart.id} inCart={inCart} />
       ))}
       <Link to="../../Pages/CheckoutSuccessPage">
         <button>Checkout</button>
