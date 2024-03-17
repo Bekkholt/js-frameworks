@@ -14,7 +14,8 @@ function reducer(state, action) {
     case "increment":
       const inCart = [...state.inCart];
       inCart.push(action.productDetails);
-      return { count: state.count + 1, inCart: inCart };
+      const newTotal = state.total + action.productDetails.discountedPrice;
+      return { count: state.count + 1, inCart: inCart, total: newTotal };
     case "decrement":
       return { count: state.count - 1 };
     case "reset":
@@ -24,7 +25,7 @@ function reducer(state, action) {
   }
 }
 
-const initialState = { count: 0, inCart: [] };
+const initialState = { count: 0, inCart: [], total: 0 };
 
 export default function Layout() {
   const [state, dispatch] = useReducer(reducer, initialState);
@@ -37,7 +38,7 @@ export default function Layout() {
         <Route path="/Pages/ContactPage" element={<ContactPage />} />
         <Route
           path="/Pages/CheckoutPage"
-          element={<CheckoutPage inCart={state.inCart} />}
+          element={<CheckoutPage inCart={state} />}
         />
 
         <Route
