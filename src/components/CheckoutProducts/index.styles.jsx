@@ -6,6 +6,8 @@ export const ProductDiv = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 2%;
+  background: white;
+  margin: 2%;
 `;
 
 export const ProductImage = styled.img`

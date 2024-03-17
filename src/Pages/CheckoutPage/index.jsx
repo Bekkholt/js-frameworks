@@ -8,10 +8,10 @@ export default function CheckoutPage(inCart) {
       {inCart.inCart.inCart.map((inCart, i) => (
         <CheckoutProducts key={i + inCart.id} inCart={inCart} />
       ))}
+      <p>Total price: {inCart.inCart.total.toFixed(2)}</p>
       <Link to="../../Pages/CheckoutSuccessPage">
         <button>Checkout</button>
       </Link>
-      <p>Total price: {inCart.inCart.total.toFixed(2)}</p>
     </div>
   );
 }
