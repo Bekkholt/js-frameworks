@@ -12,7 +12,9 @@ import { useReducer } from "react";
 function reducer(state, action) {
   switch (action.type) {
     case "increment":
-      return { count: state.count + 1, inCart: [action.id] };
+      const inCart = [...state.inCart];
+      inCart.push(action.productDetails);
+      return { count: state.count + 1, inCart: inCart };
     case "decrement":
       return { count: state.count - 1 };
     case "reset":

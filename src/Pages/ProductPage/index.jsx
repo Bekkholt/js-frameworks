@@ -69,7 +69,10 @@ export default function ProductPage(addToCart) {
       <S.SavePrice> - {Save}.00</S.SavePrice>
       <S.DiscountPrice>{productDetails.discountedPrice}</S.DiscountPrice>
       <S.ProductDescription>{productDetails.description}</S.ProductDescription>
-      <AddToCart addToCart={addToCart.addToCart} />
+      <AddToCart
+        addToCart={addToCart.addToCart}
+        productDetails={productDetails}
+      />
       <S.ReviewTitle>Reviews</S.ReviewTitle>
       {reviews}
     </div>
