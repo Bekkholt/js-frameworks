@@ -4,7 +4,7 @@ import * as S from "./index.styles";
 export default function AddToCart({ addToCart, productDetails }) {
   const onButtonClick = () => {
     addToCart({
-      type: "increment",
+      type: "add",
       productDetails: productDetails,
     });
   };

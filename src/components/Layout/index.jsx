@@ -11,15 +11,15 @@ import { useReducer } from "react";
 
 function reducer(state, action) {
   switch (action.type) {
-    case "increment":
+    case "add":
       const inCart = [...state.inCart];
       inCart.push(action.productDetails);
       const newTotal = state.total + action.productDetails.discountedPrice;
       return { count: state.count + 1, inCart: inCart, total: newTotal };
-    case "decrement":
+    case "remove":
       return { count: state.count - 1 };
     case "reset":
-      return { count: 0 };
+      return { count: 0, inCart: [], total: 0 };
     default:
       throw new Error();
   }
@@ -38,7 +38,12 @@ export default function Layout() {
         <Route path="/Pages/ContactPage" element={<ContactPage />} />
         <Route
           path="/Pages/CheckoutPage"
-          element={<CheckoutPage inCart={state} />}
+          element={
+            <CheckoutPage
+              inCart={state}
+              reset={() => dispatch({ type: "reset" })}
+            />
+          }
         />
 
         <Route
