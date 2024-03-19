@@ -2,6 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import * as S from "./index.styles";
 
 const schema = yup
   .object({
@@ -38,21 +39,23 @@ export default function Form() {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <input placeholder="Full name" {...register("fullName")} />
-      <p>{errors.fullName?.message}</p>
-      <input placeholder="Subject" {...register("subject")} />
-      <p>{errors.subject?.message}</p>
-      <input
-        placeholder="Email"
-        {...register("email", {
-          pattern: /[A-Za-z]{3}/,
-        })}
-      />
-      <p>{errors.email?.message}</p>
-      <input placeholder="Message" {...register("body")} />
-      <p>{errors.body?.message}</p>
-      <input type="submit" />
-    </form>
+    <S.contact>
+      <S.form onSubmit={handleSubmit(onSubmit)}>
+        <input placeholder="Full name" {...register("fullName")} />
+        <p>{errors.fullName?.message}</p>
+        <input placeholder="Subject" {...register("subject")} />
+        <p>{errors.subject?.message}</p>
+        <input
+          placeholder="Email"
+          {...register("email", {
+            pattern: /[A-Za-z]{3}/,
+          })}
+        />
+        <p>{errors.email?.message}</p>
+        <S.message placeholder="Message" {...register("body")} />
+        <p>{errors.body?.message}</p>
+        <input type="submit" />
+      </S.form>
+    </S.contact>
   );
 }

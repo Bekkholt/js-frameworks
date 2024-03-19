@@ -7,14 +7,17 @@
   justify-content: space-between;
   font-size: 15px;
   font-weight: 500;
-  padding-left: 5%;
-  padding-right: 5%;
+  position: fixed;
+  width: 100%;
+  top: 0;
 }
 
 .App-nav {
   color: #0a0f11;
   display: flex;
   list-style: none;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 li {
@@ -24,4 +27,5 @@ li {
 .Cart-Icon {
   display: flex;
   flex-direction: row;
+  padding-right: 5%;
 }

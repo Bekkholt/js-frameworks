@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 export const Searchbar = styled.input`
-  background-color: lightblue;
+  background-color: white;
   max-width: 50vh;
+  height: 30px;
 `;
 
 export const SearchItems = styled.div`
