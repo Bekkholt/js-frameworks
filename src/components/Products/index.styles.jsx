@@ -27,6 +27,7 @@ export const ProductButton = styled.button`
   background: none;
   background-color: lightblue;
   margin: 2%;
+  border-radius: 0.2rem;
 `;
 
 export const ProductPrice = styled.p`
