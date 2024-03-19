@@ -9,6 +9,7 @@ export const form = styled.form`
   background-color: white;
   padding: 2%;
   width: 60%;
+  border-radius: 0.2rem;
 `;
 
 export const message = styled.input`

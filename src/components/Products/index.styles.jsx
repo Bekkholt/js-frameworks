@@ -4,6 +4,7 @@ export const ProductCard = styled.div`
   background-color: white;
   max-width: 50vh;
   margin: 2%;
+  border-radius: 0.2rem;
 `;
 
 export const ProductTitle = styled.h2`

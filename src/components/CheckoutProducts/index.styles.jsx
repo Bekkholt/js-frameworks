@@ -8,6 +8,7 @@ export const ProductDiv = styled.div`
   padding: 2%;
   background: white;
   margin: 2%;
+  border-radius: 0.2rem;
 `;
 
 export const ProductImage = styled.img`
