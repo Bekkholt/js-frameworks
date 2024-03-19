@@ -43,7 +43,7 @@ export default function Searchbar() {
           ? " "
           : SearchResults.map((product) => (
               <Link
-                to={`/src/Pages/ProductPage/${product.id}`}
+                to={`../../Pages/ProductPage/${product.id}`}
                 key={product.id}
               >
                 <S.SearchResults>{product.title}</S.SearchResults>
