@@ -1,12 +1,13 @@
 import Products from "../Products";
 import FetchAPI from "../../Hooks/API";
+import * as S from "./index.styles";
 
 export default function ProductList() {
   const { products } = FetchAPI("https://v2.api.noroff.dev/online-shop/");
 
   <FetchAPI />;
   return (
-    <div>
+    <S.ProductWrapper>
       {products.map((product) => (
         <Products
           key={product.id}
@@ -18,6 +19,6 @@ export default function ProductList() {
           discountedPrice={product.discountedPrice}
         />
       ))}
-    </div>
+    </S.ProductWrapper>
   );
 }

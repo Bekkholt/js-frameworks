@@ -23,9 +23,3 @@ a {
 a:hover {
   text-decoration: underline;
 }
-
-.Cards {
-  display: flex;
-  justify-content: center;
-  padding: 2%;
-}
