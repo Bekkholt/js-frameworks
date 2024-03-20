@@ -1,5 +1,17 @@
 import styled from "styled-components";
 
+export const ProductPageDiv = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+export const Wrapper = styled.div`
+  background: white;
+  width: 70vh;
+  padding: 2%;
+  margin: 2%;
+`;
+
 export const ProductTitle = styled.h2`
   text-decoration: underline;
 `;

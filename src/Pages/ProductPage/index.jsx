@@ -59,22 +59,26 @@ export default function ProductPage(addToCart) {
   }
 
   return (
-    <div>
-      <S.ProductTitle>{productDetails.title}</S.ProductTitle>
-      <S.ProductImage
-        alt={productDetails.image.alt}
-        src={productDetails.image.url}
-      ></S.ProductImage>
-      <S.ProductPrice>{productDetails.price}</S.ProductPrice>
-      <S.SavePrice> - {Save}</S.SavePrice>
-      <S.DiscountPrice>{productDetails.discountedPrice}</S.DiscountPrice>
-      <S.ProductDescription>{productDetails.description}</S.ProductDescription>
-      <AddToCart
-        addToCart={addToCart.addToCart}
-        productDetails={productDetails}
-      />
-      <S.ReviewTitle>Reviews</S.ReviewTitle>
-      {reviews}
-    </div>
+    <S.ProductPageDiv>
+      <S.Wrapper>
+        <S.ProductTitle>{productDetails.title}</S.ProductTitle>
+        <S.ProductImage
+          alt={productDetails.image.alt}
+          src={productDetails.image.url}
+        ></S.ProductImage>
+        <S.ProductPrice>{productDetails.price}</S.ProductPrice>
+        <S.SavePrice> - {Save}</S.SavePrice>
+        <S.DiscountPrice>{productDetails.discountedPrice}</S.DiscountPrice>
+        <S.ProductDescription>
+          {productDetails.description}
+        </S.ProductDescription>
+        <AddToCart
+          addToCart={addToCart.addToCart}
+          productDetails={productDetails}
+        />
+        <S.ReviewTitle>Reviews</S.ReviewTitle>
+        {reviews}
+      </S.Wrapper>
+    </S.ProductPageDiv>
   );
 }

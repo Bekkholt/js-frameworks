@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ProductCard = styled.div`
   background-color: white;
-  max-width: 40vh;
+  max-width: 50vh;
   margin: 2%;
   border-radius: 0.2rem;
 `;
