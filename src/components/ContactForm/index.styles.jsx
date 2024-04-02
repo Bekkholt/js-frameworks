@@ -20,14 +20,31 @@ export const inputs = styled.input`
 export const message = styled.input`
   height: 100px;
   border-radius: 0.3rem;
+  background-color: #d0f0fd;
 `;
 
 export const SubmitButton = styled.input`
   background-color: #d0f0fd;
   padding: 1%;
   border-radius: 0.2rem;
+  margin: 2%;
+  width: 30%;
 `;
 
 export const error = styled.p`
   color: #892c25;
+`;
+
+export const ButtonDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const BackButton = styled.button`
+  background-color: #d0f0fd;
+  padding: 1%;
+  border-radius: 0.2rem;
+  margin: 2%;
+  width: 30%;
 `;

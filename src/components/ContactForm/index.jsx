@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import * as S from "./index.styles";
+import { Link } from "react-router-dom";
 
 const schema = yup
   .object({
@@ -36,6 +37,7 @@ export default function Form() {
 
   function onSubmit(data) {
     console.log(data);
+    alert(`Message submitted successfully`);
   }
 
   return (
@@ -54,7 +56,12 @@ export default function Form() {
         <S.error>{errors.email?.message}</S.error>
         <S.message placeholder="Message" {...register("body")} />
         <S.error>{errors.body?.message}</S.error>
-        <S.SubmitButton type="submit" />
+        <S.ButtonDiv>
+          <S.SubmitButton type="submit" />
+          <S.BackButton>
+            <Link to={"/"}>Go back</Link>
+          </S.BackButton>
+        </S.ButtonDiv>
       </S.form>
     </S.contact>
   );
