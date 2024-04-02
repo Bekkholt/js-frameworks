@@ -9,6 +9,7 @@ export const ProductCard = styled.div`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  box-shadow: 2px 2px 2px 2px rgb(0 0 0 / 20%);
 `;
 
 export const ProductTitle = styled.h2`

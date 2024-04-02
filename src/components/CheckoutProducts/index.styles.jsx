@@ -18,6 +18,7 @@ export const ProductDiv = styled.div`
   border-radius: 0.2rem;
   width: 50vh;
   height: 200px;
+  box-shadow: 2px 2px 2px 2px rgb(0 0 0 / 20%);
 `;
 
 export const ProductImage = styled.img`

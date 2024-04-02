@@ -10,6 +10,7 @@ export const Wrapper = styled.div`
   width: 70vh;
   padding: 2%;
   margin: 2%;
+  box-shadow: 2px 2px 2px 2px rgb(0 0 0 / 20%);
 `;
 
 export const ProductTitle = styled.h2`
