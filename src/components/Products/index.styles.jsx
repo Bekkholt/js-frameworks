@@ -29,7 +29,7 @@ export const ProductDescription = styled.p`
 export const ProductButton = styled.button`
   border: 2;
   background: none;
-  background-color: lightblue;
+  background-color: #d0f0fd;
   margin: 2%;
   border-radius: 0.2rem;
 `;

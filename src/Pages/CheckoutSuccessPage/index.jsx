@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
+import * as S from "./index.styles";
 
 export default function CheckoutSuccessPage() {
   return (
     <div>
       <p>Your order was successful!</p>
       <Link to="/">
-        <button>Go back</button>
+        <S.BackButton>Go back</S.BackButton>
       </Link>
     </div>
   );

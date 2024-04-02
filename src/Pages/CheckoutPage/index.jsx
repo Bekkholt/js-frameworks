@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import CheckoutProducts from "../../components/CheckoutProducts";
+import * as S from "./index.styles";
 
 export default function CheckoutPage({ inCart, reset }) {
   return (
@@ -10,7 +11,7 @@ export default function CheckoutPage({ inCart, reset }) {
       ))}
       <p>Total price: {inCart.total.toFixed(2)}</p>
       <Link to="../../Pages/CheckoutSuccessPage">
-        <button onClick={() => reset()}>Checkout</button>
+        <S.CheckoutButton onClick={() => reset()}>Checkout</S.CheckoutButton>
       </Link>
     </div>
   );
