@@ -15,3 +15,10 @@ export const form = styled.form`
 export const message = styled.input`
   height: 100px;
 `;
+
+export const SubmitButton = styled.input`
+  border: 2;
+  background: none;
+  background-color: #d0f0fd;
+  border-radius: 0.2rem;
+`;

@@ -54,7 +54,7 @@ export default function Form() {
         <p>{errors.email?.message}</p>
         <S.message placeholder="Message" {...register("body")} />
         <p>{errors.body?.message}</p>
-        <input type="submit" />
+        <S.SubmitButton type="submit" />
       </S.form>
     </S.contact>
   );
