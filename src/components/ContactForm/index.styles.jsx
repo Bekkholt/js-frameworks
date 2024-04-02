@@ -30,6 +30,11 @@ export const SubmitButton = styled.input`
   border-radius: 0.2rem;
   margin: 2%;
   width: 30%;
+
+  :hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
 `;
 
 export const error = styled.p`
