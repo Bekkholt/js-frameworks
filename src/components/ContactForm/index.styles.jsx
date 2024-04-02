@@ -12,8 +12,14 @@ export const form = styled.form`
   border-radius: 0.2rem;
 `;
 
+export const inputs = styled.input`
+  border-radius: 0.3rem;
+  background-color: #d0f0fd;
+`;
+
 export const message = styled.input`
   height: 100px;
+  border-radius: 0.3rem;
 `;
 
 export const SubmitButton = styled.input`

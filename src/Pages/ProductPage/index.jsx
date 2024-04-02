@@ -58,6 +58,26 @@ export default function ProductPage(addToCart) {
     );
   }
 
+  const hasDiscount = Discount !== Price;
+
+  function price() {
+    if (hasDiscount === true) {
+      return (
+        <>
+          <S.ProductPrice>{productDetails.price}</S.ProductPrice>
+          <S.SavePrice> - {Save}</S.SavePrice>
+          <S.DiscountPrice>{productDetails.discountedPrice}</S.DiscountPrice>
+        </>
+      );
+    } else {
+      return (
+        <>
+          <S.NoDiscount>{productDetails.price}</S.NoDiscount>
+        </>
+      );
+    }
+  }
+
   return (
     <S.ProductPageDiv>
       <S.Wrapper>
@@ -66,9 +86,7 @@ export default function ProductPage(addToCart) {
           alt={productDetails.image.alt}
           src={productDetails.image.url}
         ></S.ProductImage>
-        <S.ProductPrice>{productDetails.price}</S.ProductPrice>
-        <S.SavePrice> - {Save}</S.SavePrice>
-        <S.DiscountPrice>{productDetails.discountedPrice}</S.DiscountPrice>
+        {price()}
         <S.ProductDescription>
           {productDetails.description}
         </S.ProductDescription>

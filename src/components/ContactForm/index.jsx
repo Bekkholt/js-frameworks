@@ -41,11 +41,11 @@ export default function Form() {
   return (
     <S.contact>
       <S.form onSubmit={handleSubmit(onSubmit)}>
-        <input placeholder="Full name" {...register("fullName")} />
+        <S.inputs placeholder="Full name" {...register("fullName")} />
         <S.error>{errors.fullName?.message}</S.error>
-        <input placeholder="Subject" {...register("subject")} />
+        <S.inputs placeholder="Subject" {...register("subject")} />
         <S.error>{errors.subject?.message}</S.error>
-        <input
+        <S.inputs
           placeholder="Email"
           {...register("email", {
             pattern: /[A-Za-z]{3}/,

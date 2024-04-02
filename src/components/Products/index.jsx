@@ -3,6 +3,27 @@ import * as S from "./index.styles";
 import { Link } from "react-router-dom";
 
 export default function Product(product) {
+  let Price = product.price;
+  let Discount = product.discountedPrice;
+
+  const hasDiscount = Discount !== Price;
+
+  function price() {
+    if (hasDiscount === true) {
+      return (
+        <>
+          <S.ProductPrice>{product.price}</S.ProductPrice>
+          <S.DiscountPrice>{product.discountedPrice}</S.DiscountPrice>
+        </>
+      );
+    } else {
+      return (
+        <>
+          <S.NoDiscount>{product.price}</S.NoDiscount>
+        </>
+      );
+    }
+  }
   return (
     <S.ProductCard>
       <S.ProductImage
@@ -14,8 +35,7 @@ export default function Product(product) {
       <Link to={`../../Pages/ProductPage/${product.id}`}>
         <S.ProductButton>View product</S.ProductButton>
       </Link>
-      <S.ProductPrice>{product.price}</S.ProductPrice>
-      <S.DiscountPrice>{product.discountedPrice}</S.DiscountPrice>
+      {price()}
     </S.ProductCard>
   );
 }

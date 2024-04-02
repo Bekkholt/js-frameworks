@@ -47,3 +47,8 @@ export const DiscountPrice = styled.p`
   color: darkred;
   font-weight: bold;
 `;
+
+export const NoDiscount = styled.p`
+  font-size: x-large;
+  font-weight: bold;
+`;
