@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import AddToCart from "../../components/AddToCart";
 import * as S from "./index.styles";
+import { PuffLoader } from "react-spinners";
 
 export default function ProductPage(addToCart) {
   const [productDetails, setProductDetails] = useState(null);
@@ -30,7 +31,19 @@ export default function ProductPage(addToCart) {
   }, [id]);
 
   if (isLoading || !productDetails) {
-    return <div>Loading</div>;
+    return (
+      <>
+        <S.SpinnerDiv>
+          <PuffLoader
+            loading={isLoading}
+            size={60}
+            aria-label="Loading Spinner"
+            data-testid="loader"
+            color="#97b0de"
+          />
+        </S.SpinnerDiv>
+      </>
+    );
   }
 
   if (isError) {

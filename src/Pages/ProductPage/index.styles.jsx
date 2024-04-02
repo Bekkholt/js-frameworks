@@ -5,6 +5,11 @@ export const ProductPageDiv = styled.div`
   justify-content: center;
 `;
 
+export const SpinnerDiv = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
 export const Wrapper = styled.div`
   background: white;
   width: 70vh;
