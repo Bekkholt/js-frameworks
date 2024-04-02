@@ -42,18 +42,18 @@ export default function Form() {
     <S.contact>
       <S.form onSubmit={handleSubmit(onSubmit)}>
         <input placeholder="Full name" {...register("fullName")} />
-        <p>{errors.fullName?.message}</p>
+        <S.error>{errors.fullName?.message}</S.error>
         <input placeholder="Subject" {...register("subject")} />
-        <p>{errors.subject?.message}</p>
+        <S.error>{errors.subject?.message}</S.error>
         <input
           placeholder="Email"
           {...register("email", {
             pattern: /[A-Za-z]{3}/,
           })}
         />
-        <p>{errors.email?.message}</p>
+        <S.error>{errors.email?.message}</S.error>
         <S.message placeholder="Message" {...register("body")} />
-        <p>{errors.body?.message}</p>
+        <S.error>{errors.body?.message}</S.error>
         <S.SubmitButton type="submit" />
       </S.form>
     </S.contact>

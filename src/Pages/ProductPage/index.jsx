@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import AddToCart from "../../components/AddToCart";
 import * as S from "./index.styles";
 
@@ -78,6 +78,9 @@ export default function ProductPage(addToCart) {
         />
         <S.ReviewTitle>Reviews</S.ReviewTitle>
         {reviews}
+        <Link to="/">
+          <S.BackButton>Go back</S.BackButton>
+        </Link>
       </S.Wrapper>
     </S.ProductPageDiv>
   );

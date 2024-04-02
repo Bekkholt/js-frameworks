@@ -49,17 +49,22 @@ export const ReviewTitle = styled.h3`
   padding-top: 5%;
 `;
 
+export const BackButton = styled.button`
+  border: 2;
+  background: none;
+  background-color: #d0f0fd;
+  border-radius: 0.2rem;
+`;
+
 export const ProductReviews = styled.div`
   h4 {
     display: flex;
     align-items: flex-start;
-    margin-left: 10%;
     text-decoration: underline;
   }
 
   p {
     display: flex;
     align-items: flex-start;
-    margin-left: 10%;
   }
 `;

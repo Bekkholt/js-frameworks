@@ -17,8 +17,11 @@ export const message = styled.input`
 `;
 
 export const SubmitButton = styled.input`
-  border: 2;
-  background: none;
   background-color: #d0f0fd;
+  padding: 1%;
   border-radius: 0.2rem;
+`;
+
+export const error = styled.p`
+  color: #892c25;
 `;
