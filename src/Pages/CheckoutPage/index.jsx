@@ -3,6 +3,21 @@ import CheckoutProducts from "../../components/CheckoutProducts";
 import * as S from "./index.styles";
 
 export default function CheckoutPage({ inCart, reset }) {
+  function Checkout() {
+    if (inCart.count === 0) {
+      return <></>;
+    } else {
+      return (
+        <>
+          <Link to="../../Pages/CheckoutSuccessPage">
+            <S.CheckoutButton onClick={() => reset()}>
+              Checkout
+            </S.CheckoutButton>
+          </Link>
+        </>
+      );
+    }
+  }
   return (
     <div>
       <h1>In cart</h1>
@@ -10,9 +25,7 @@ export default function CheckoutPage({ inCart, reset }) {
         <CheckoutProducts key={i + inCart.id} inCart={inCart} />
       ))}
       <p>Total price: {inCart.total.toFixed(2)}</p>
-      <Link to="../../Pages/CheckoutSuccessPage">
-        <S.CheckoutButton onClick={() => reset()}>Checkout</S.CheckoutButton>
-      </Link>
+      {Checkout()}
     </div>
   );
 }
