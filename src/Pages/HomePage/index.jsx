@@ -5,7 +5,7 @@ import * as S from "./index.styles";
 export default function HomePage() {
   return (
     <div>
-      <h2>Shop Products</h2>
+      <h2 className="title">Shop-drop</h2>
       <Searchbar />
       <S.Cards>
         <ProductList />

@@ -10,6 +10,13 @@ body {
   height: 100vh;
 }
 
+.title {
+  font-family: "AR One Sans", sans-serif;
+  font-weight: 700;
+  text-decoration: underline;
+  font-size: 3.5rem;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
