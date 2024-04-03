@@ -1,3 +1,4 @@
+import SolarTrashBinTrashLinear from "../BinIcon";
 import * as S from "./index.styles";
 
 export default function CheckoutProducts({ inCart, remove }) {
@@ -7,9 +8,11 @@ export default function CheckoutProducts({ inCart, remove }) {
     } else {
       return (
         <>
-          <button onClick={() => remove({ type: "remove", id: inCart.id })}>
+          <SolarTrashBinTrashLinear
+            onClick={() => remove({ type: "remove", id: inCart.id })}
+          >
             Remove
-          </button>
+          </SolarTrashBinTrashLinear>
         </>
       );
     }

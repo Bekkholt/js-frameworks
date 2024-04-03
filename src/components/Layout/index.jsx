@@ -11,7 +11,7 @@ import { useReducer } from "react";
 
 function reducer(state, action) {
   let inCart;
-  let productIndex;
+  let cartItemIndex;
   let newTotal;
 
   switch (action.type) {
@@ -21,15 +21,15 @@ function reducer(state, action) {
       newTotal = state.total + action.productDetails.discountedPrice;
       return { count: state.count + 1, inCart: inCart, total: newTotal };
     case "remove":
-      productIndex = state.inCart.findIndex(
+      cartItemIndex = state.inCart.findIndex(
         (product) => product.id === action.id
       );
-      const cartItem = state.inCart[productIndex];
-      const itemPrice = cartItem.discountedPrice;
+      const product = state.inCart[cartItemIndex];
+      const itemPrice = product.discountedPrice;
       newTotal = state.total - itemPrice;
       inCart = [...state.inCart];
-      if (productIndex !== -1) {
-        inCart.splice(productIndex, 1);
+      if (cartItemIndex !== -1) {
+        inCart.splice(cartItemIndex, 1);
       }
       return { count: state.count - 1, inCart: inCart, total: newTotal };
     case "reset":
