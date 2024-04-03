@@ -10,14 +10,28 @@ import CheckoutSuccessPage from "../../Pages/CheckoutSuccessPage";
 import { useReducer } from "react";
 
 function reducer(state, action) {
+  let inCart;
+  let productIndex;
+  let newTotal;
+
   switch (action.type) {
     case "add":
-      const inCart = [...state.inCart];
+      inCart = [...state.inCart];
       inCart.push(action.productDetails);
-      const newTotal = state.total + action.productDetails.discountedPrice;
+      newTotal = state.total + action.productDetails.discountedPrice;
       return { count: state.count + 1, inCart: inCart, total: newTotal };
     case "remove":
-      return { count: state.count - 1 };
+      productIndex = state.inCart.findIndex(
+        (product) => product.id === action.id
+      );
+      const cartItem = state.inCart[productIndex];
+      const itemPrice = cartItem.discountedPrice;
+      newTotal = state.total - itemPrice;
+      inCart = [...state.inCart];
+      if (productIndex !== -1) {
+        inCart.splice(productIndex, 1);
+      }
+      return { count: state.count - 1, inCart: inCart, total: newTotal };
     case "reset":
       return { count: 0, inCart: [], total: 0 };
     default:
@@ -42,6 +56,7 @@ export default function Layout() {
             <CheckoutPage
               inCart={state}
               reset={() => dispatch({ type: "reset" })}
+              remove={(action) => dispatch(action)}
             />
           }
         />

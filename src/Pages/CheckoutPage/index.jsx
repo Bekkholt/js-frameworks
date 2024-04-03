@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import CheckoutProducts from "../../components/CheckoutProducts";
 import * as S from "./index.styles";
 
-export default function CheckoutPage({ inCart, reset }) {
+export default function CheckoutPage({ inCart, reset, remove }) {
   function Checkout() {
     if (inCart.count === 0) {
       return <></>;
@@ -22,7 +22,7 @@ export default function CheckoutPage({ inCart, reset }) {
     <div>
       <h1>In cart</h1>
       {inCart.inCart.map((inCart, i) => (
-        <CheckoutProducts key={i + inCart.id} inCart={inCart} />
+        <CheckoutProducts key={i + inCart.id} inCart={inCart} remove={remove} />
       ))}
       <p>Total price: {inCart.total.toFixed(2)}</p>
       {Checkout()}
