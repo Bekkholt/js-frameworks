@@ -13,7 +13,7 @@ export const ProductCard = styled.div`
 `;
 
 export const ProductTitle = styled.h2`
-  text-decoration: underline;
+  font-size: 1.5rem;
 `;
 
 export const ProductImage = styled.img`

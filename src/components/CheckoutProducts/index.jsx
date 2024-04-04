@@ -21,8 +21,8 @@ export default function CheckoutProducts({ inCart, remove }) {
     <S.CheckoutDiv>
       <S.ProductDiv>
         <S.ProductImage alt={inCart.image.alt} src={inCart.image.url} />
-        <p>{inCart.title}</p>
-        <p>{inCart.discountedPrice}</p>
+        <p className="text">{inCart.title}</p>
+        <p className="text">{inCart.discountedPrice}</p>
         {RemoveProduct()}
       </S.ProductDiv>
     </S.CheckoutDiv>

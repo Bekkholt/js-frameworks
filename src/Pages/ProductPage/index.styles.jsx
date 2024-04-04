@@ -19,7 +19,7 @@ export const Wrapper = styled.div`
 `;
 
 export const ProductTitle = styled.h2`
-  text-decoration: underline;
+  font-size: 2.5rem;
 `;
 
 export const ProductImage = styled.img`
@@ -56,8 +56,8 @@ export const DiscountPrice = styled.p`
 `;
 
 export const ReviewTitle = styled.h3`
-  text-decoration: underline;
   padding-top: 5%;
+  font-size: 2rem;
 `;
 
 export const BackButton = styled.button`
@@ -71,7 +71,7 @@ export const ProductReviews = styled.div`
   h4 {
     display: flex;
     align-items: flex-start;
-    text-decoration: underline;
+    font-size: 1rem;
   }
 
   p {

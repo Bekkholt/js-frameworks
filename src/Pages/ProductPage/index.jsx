@@ -57,8 +57,8 @@ export default function ProductPage(addToCart) {
   let reviews = productDetails.reviews.map((review) => (
     <S.ProductReviews key={review.id}>
       <div>
-        <h4>{review.username} says:</h4>
-        <p>{review.description}</p>
+        <h4 className="title">{review.username} says:</h4>
+        <p className="text">{review.description}</p>
       </div>
     </S.ProductReviews>
   ));
@@ -66,7 +66,7 @@ export default function ProductPage(addToCart) {
   if (reviews.length === 0) {
     reviews = (
       <S.ProductReviews>
-        <p>No reviews</p>
+        <p className="text">No reviews</p>
       </S.ProductReviews>
     );
   }
@@ -77,9 +77,13 @@ export default function ProductPage(addToCart) {
     if (hasDiscount === true) {
       return (
         <>
-          <S.ProductPrice>{productDetails.price}</S.ProductPrice>
-          <S.SavePrice> - {Save}</S.SavePrice>
-          <S.DiscountPrice>{productDetails.discountedPrice}</S.DiscountPrice>
+          <S.ProductPrice className="text">
+            {productDetails.price}
+          </S.ProductPrice>
+          <S.SavePrice className="text"> - {Save}</S.SavePrice>
+          <S.DiscountPrice className="text">
+            {productDetails.discountedPrice}
+          </S.DiscountPrice>
         </>
       );
     } else {
@@ -94,20 +98,22 @@ export default function ProductPage(addToCart) {
   return (
     <S.ProductPageDiv>
       <S.Wrapper>
-        <S.ProductTitle>{productDetails.title}</S.ProductTitle>
+        <S.ProductTitle className="title">
+          {productDetails.title}
+        </S.ProductTitle>
         <S.ProductImage
           alt={productDetails.image.alt}
           src={productDetails.image.url}
         ></S.ProductImage>
         {price()}
-        <S.ProductDescription>
+        <S.ProductDescription className="text">
           {productDetails.description}
         </S.ProductDescription>
         <AddToCart
           addToCart={addToCart.addToCart}
           productDetails={productDetails}
         />
-        <S.ReviewTitle>Reviews</S.ReviewTitle>
+        <S.ReviewTitle className="title">Reviews</S.ReviewTitle>
         {reviews}
         <Link to="/">
           <S.BackButton>Go back</S.BackButton>

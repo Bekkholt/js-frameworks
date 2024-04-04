@@ -1,11 +1,5 @@
 import styled from "styled-components";
 
-export const Cards = styled.div`
-  display: flex;
-  justify-content: center;
-  padding: 2%;
-`;
-
 export const Header = styled.h1`
   font-weight: 500;
   font-size: 2rem;

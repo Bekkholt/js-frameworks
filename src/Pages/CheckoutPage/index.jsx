@@ -20,11 +20,12 @@ export default function CheckoutPage({ inCart, reset, remove }) {
   }
   return (
     <div>
-      <h1>In cart</h1>
+      <h1 className="title">Shop-drop</h1>
+      <S.Header className="title">In cart</S.Header>
       {inCart.inCart.map((inCart, i) => (
         <CheckoutProducts key={i + inCart.id} inCart={inCart} remove={remove} />
       ))}
-      <p>Total price: {inCart.total.toFixed(2)}</p>
+      <p className="text">Total price: {inCart.total.toFixed(2)}</p>
       {Checkout()}
     </div>
   );

@@ -46,7 +46,9 @@ export default function Searchbar() {
                 to={`../../Pages/ProductPage/${product.id}`}
                 key={product.id}
               >
-                <S.SearchResults>{product.title}</S.SearchResults>
+                <S.SearchResults className="text">
+                  {product.title}
+                </S.SearchResults>
               </Link>
             ))}
       </S.SearchItems>

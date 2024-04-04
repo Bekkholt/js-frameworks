@@ -8,10 +8,14 @@ export default function Header(count) {
     <header className="App-header">
       <nav className="App-nav">
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/" className="text">
+            Home
+          </Link>
         </li>
         <li>
-          <Link to="../../Pages/ContactPage">Contact</Link>
+          <Link to="../../Pages/ContactPage" className="text">
+            Contact
+          </Link>
         </li>
       </nav>
       <div className="Cart-Icon">

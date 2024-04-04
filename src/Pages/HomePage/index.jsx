@@ -5,8 +5,9 @@ import * as S from "./index.styles";
 export default function HomePage() {
   return (
     <div>
-      <h2 className="title">Shop-drop</h2>
+      <h1 className="title">Shop-drop</h1>
       <Searchbar />
+      <S.Header className="title">All products</S.Header>
       <S.Cards>
         <ProductList />
       </S.Cards>

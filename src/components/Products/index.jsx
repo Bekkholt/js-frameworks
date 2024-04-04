@@ -30,8 +30,10 @@ export default function Product(product) {
         alt={product.image.alt}
         src={product.image.url}
       ></S.ProductImage>
-      <S.ProductTitle>{product.title}</S.ProductTitle>
-      <S.ProductDescription>{product.description}</S.ProductDescription>
+      <S.ProductTitle className="title">{product.title}</S.ProductTitle>
+      <S.ProductDescription className="text">
+        {product.description}
+      </S.ProductDescription>
       <Link to={`../../Pages/ProductPage/${product.id}`}>
         <S.ProductButton>View product</S.ProductButton>
       </Link>

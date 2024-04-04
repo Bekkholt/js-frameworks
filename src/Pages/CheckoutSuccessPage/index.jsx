@@ -4,7 +4,7 @@ import * as S from "./index.styles";
 export default function CheckoutSuccessPage() {
   return (
     <div>
-      <p>Your order was successful!</p>
+      <p className="text">Your order was successful!</p>
       <Link to="/">
         <S.BackButton>Go back</S.BackButton>
       </Link>
