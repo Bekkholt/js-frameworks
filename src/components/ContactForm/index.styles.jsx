@@ -28,6 +28,7 @@ export const message = styled.input`
 
 export const SubmitButton = styled.input`
   background-color: #d0f0fd;
+  border-color: black;
   color: black;
   padding: 1%;
   border-radius: 0.2rem;
@@ -53,6 +54,7 @@ export const ButtonDiv = styled.div`
 
 export const BackButton = styled.button`
   background-color: #d0f0fd;
+  border-color: black;
   color: black;
   padding: 1%;
   border-radius: 0.2rem;

@@ -63,6 +63,7 @@ export const ReviewTitle = styled.h3`
 export const BackButton = styled.button`
   border: 2;
   background: none;
+  border-color: black;
   background-color: #d0f0fd;
   border-radius: 0.2rem;
   padding: 2%;
