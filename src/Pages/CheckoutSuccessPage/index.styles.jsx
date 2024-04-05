@@ -6,4 +6,9 @@ export const BackButton = styled.button`
   background-color: #97b0de;
   border-radius: 0.2rem;
   padding: 2%;
+  cursor: pointer;
+
+  :hover {
+    text-decoration: underline;
+  }
 `;

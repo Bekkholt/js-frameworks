@@ -7,6 +7,11 @@ export const CheckoutButton = styled.button`
   border-radius: 0.2rem;
   margin: 2%;
   padding: 2%;
+  cursor: pointer;
+
+  :hover {
+    text-decoration: underline;
+  }
 `;
 
 export const Header = styled.h1`

@@ -34,6 +34,11 @@ export const ProductButton = styled.button`
   margin: 2%;
   border-radius: 0.2rem;
   padding: 2%;
+  cursor: pointer;
+
+  :hover {
+    text-decoration: underline;
+  }
 `;
 
 export const ProductPrice = styled.p`
