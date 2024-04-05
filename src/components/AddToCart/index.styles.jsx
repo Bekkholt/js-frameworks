@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const ProductButton = styled.button`
+  color: black;
   border: 2;
   background: none;
   background-color: #d0f0fd;

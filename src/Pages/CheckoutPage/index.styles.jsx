@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const CheckoutButton = styled.button`
+  color: black;
   border: 2;
   background: none;
   background-color: #97b0de;

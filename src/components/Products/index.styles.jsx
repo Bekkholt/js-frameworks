@@ -35,6 +35,7 @@ export const ProductButton = styled.button`
   border-radius: 0.2rem;
   padding: 2%;
   cursor: pointer;
+  color: black;
 
   :hover {
     text-decoration: underline;
