@@ -11,11 +11,13 @@ export const form = styled.form`
   width: 60%;
   border-radius: 0.2rem;
   box-shadow: 2px 2px 2px 2px rgb(0 0 0 / 20%);
+  margin-bottom: 5%;
 `;
 
 export const inputs = styled.input`
   border-radius: 0.3rem;
   background-color: #d0f0fd;
+  height: 30px;
 `;
 
 export const message = styled.input`
@@ -26,10 +28,12 @@ export const message = styled.input`
 
 export const SubmitButton = styled.input`
   background-color: #d0f0fd;
+  color: black;
   padding: 1%;
   border-radius: 0.2rem;
   margin: 2%;
   width: 30%;
+  padding: 2%;
 
   :hover {
     text-decoration: underline;
@@ -53,4 +57,5 @@ export const BackButton = styled.button`
   border-radius: 0.2rem;
   margin: 2%;
   width: 30%;
+  padding: 2%;
 `;

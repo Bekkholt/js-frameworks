@@ -65,6 +65,7 @@ export const BackButton = styled.button`
   background: none;
   background-color: #d0f0fd;
   border-radius: 0.2rem;
+  padding: 2%;
 `;
 
 export const ProductReviews = styled.div`

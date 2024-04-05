@@ -6,6 +6,7 @@ export const CheckoutButton = styled.button`
   background-color: #97b0de;
   border-radius: 0.2rem;
   margin: 2%;
+  padding: 2%;
 `;
 
 export const Header = styled.h1`

@@ -33,6 +33,7 @@ export const ProductButton = styled.button`
   background-color: #d0f0fd;
   margin: 2%;
   border-radius: 0.2rem;
+  padding: 2%;
 `;
 
 export const ProductPrice = styled.p`
