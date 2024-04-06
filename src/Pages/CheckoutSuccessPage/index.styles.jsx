@@ -7,7 +7,7 @@ export const BackButton = styled.button`
   border-color: black;
   background-color: #97b0de;
   border-radius: 0.2rem;
-  padding: 2%;
+  padding: 1%;
   cursor: pointer;
 
   :hover {

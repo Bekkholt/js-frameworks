@@ -33,8 +33,8 @@ export const SubmitButton = styled.input`
   padding: 1%;
   border-radius: 0.2rem;
   margin: 2%;
-  width: 30%;
-  padding: 2%;
+  width: 20%;
+  padding: 1%;
 
   :hover {
     text-decoration: underline;
@@ -59,6 +59,6 @@ export const BackButton = styled.button`
   padding: 1%;
   border-radius: 0.2rem;
   margin: 2%;
-  width: 30%;
-  padding: 2%;
+  width: 20%;
+  padding: 1%;
 `;

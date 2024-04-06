@@ -96,29 +96,32 @@ export default function ProductPage(addToCart) {
   }
 
   return (
-    <S.ProductPageDiv>
-      <S.Wrapper>
-        <S.ProductTitle className="title">
-          {productDetails.title}
-        </S.ProductTitle>
-        <S.ProductImage
-          alt={productDetails.image.alt}
-          src={productDetails.image.url}
-        ></S.ProductImage>
-        {price()}
-        <S.ProductDescription className="text">
-          {productDetails.description}
-        </S.ProductDescription>
-        <AddToCart
-          addToCart={addToCart.addToCart}
-          productDetails={productDetails}
-        />
-        <S.ReviewTitle className="title">Reviews</S.ReviewTitle>
-        {reviews}
-        <Link to="/">
-          <S.BackButton>Go back</S.BackButton>
-        </Link>
-      </S.Wrapper>
-    </S.ProductPageDiv>
+    <div>
+      <h1 className="title">Shop-drop</h1>
+      <S.ProductPageDiv>
+        <S.Wrapper>
+          <S.ProductTitle className="title">
+            {productDetails.title}
+          </S.ProductTitle>
+          <S.ProductImage
+            alt={productDetails.image.alt}
+            src={productDetails.image.url}
+          ></S.ProductImage>
+          {price()}
+          <S.ProductDescription className="text">
+            {productDetails.description}
+          </S.ProductDescription>
+          <AddToCart
+            addToCart={addToCart.addToCart}
+            productDetails={productDetails}
+          />
+          <S.ReviewTitle className="title">Reviews</S.ReviewTitle>
+          {reviews}
+          <Link to="/">
+            <S.BackButton>Go back</S.BackButton>
+          </Link>
+        </S.Wrapper>
+      </S.ProductPageDiv>
+    </div>
   );
 }

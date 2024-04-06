@@ -10,9 +10,7 @@ export default function CheckoutPage({ inCart, reset, remove }) {
       return (
         <>
           <Link to="../../Pages/CheckoutSuccessPage">
-            <S.CheckoutButton onClick={() => reset()}>
-              Checkout
-            </S.CheckoutButton>
+            <S.Button onClick={() => reset()}>Checkout</S.Button>
           </Link>
         </>
       );
@@ -27,6 +25,11 @@ export default function CheckoutPage({ inCart, reset, remove }) {
       ))}
       <p className="text">Total price: {inCart.total.toFixed(2)}</p>
       {Checkout()}
+      <div>
+        <Link to="/">
+          <S.Button>Go back</S.Button>
+        </Link>
+      </div>
     </div>
   );
 }

@@ -1,14 +1,14 @@
 import styled from "styled-components";
 
-export const CheckoutButton = styled.button`
+export const Button = styled.button`
   color: black;
   border: 2;
   background: none;
   border-color: black;
   background-color: #97b0de;
   border-radius: 0.2rem;
-  margin: 2%;
-  padding: 2%;
+  margin: 1%;
+  padding: 1%;
   cursor: pointer;
 
   :hover {
