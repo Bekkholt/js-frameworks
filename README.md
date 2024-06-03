@@ -1,6 +1,6 @@
 # Javascript Frameworks CA - Shop-drop
 
-![image](/public/Screenshot%202024-04-04%20092833.png)
+![image](/public/portfolioshopdrop.jpg)
 
 I have made a eCom store that I called Shop-drop.
 
